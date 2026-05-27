@@ -85,7 +85,7 @@ body{background:var(--black);color:var(--white);font-family:monospace;overflow-x
 .card-price{font-size:1.2rem;font-weight:600;color:var(--gold);font-family:monospace;margin-bottom:1rem;}
 .card-price span{font-size:.75rem;font-weight:400;color:var(--grey);font-family:monospace;} 
 .card-actions{display:flex;gap:.5rem;}
-.btn-cart{flex:1;background:var(--gold);color:var(--black);border:none;padding:.65rem;font-family:monospace;font-size:.75rem;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;cursor:pointer;transition:all .3s;}
+.btn-cart{flex:1;background:var(--gold);color:black;border:none;padding:.65rem;font-family:monospace;font-size:.75rem;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;cursor:pointer;transition:all .3s;}
 .btn-cart:hover{background:var(--gold-light);}
 .btn-cart:disabled{background:var(--border);color:var(--grey);cursor:not-allowed;}
 .btn-quick{background:transparent;border:1px solid var(--border);color:var(--grey);padding:.65rem .85rem;cursor:pointer;transition:all .3s;font-size:.85rem;}
@@ -493,9 +493,9 @@ const STORAGE_CART = "ag_cart";
 
 // ─── SAMPLE PRODUCTS ──────────────────────────────────────
 const SAMPLE_PRODUCTS = [
-  {id:"p1",name:"Patek Phillip Nautilus",category:"Watches",price:3000,description:"Ref no: 5911. Sports watch, Quartz movement, Date Function, Stainless steel",image:"1.jpg",stock:1,inStock:true},
+  {id:"p1",name:"Patek Phillip Nautilus. Ref no: 5911. Sports watch.",category:"Watches",price:3000,description:"Quartz movement, Date Function, Stainless steel",image:"1.jpg",stock:1,inStock:true},
   {id:"p2",name:"Cartier Santos",category:"Watches",price:3000,description:"Quartz movement, Black & Silver, Crocodile Strap",image:"4.png",stock:1,inStock:true},
-  {id:"p3",name:"Vacheron Contantine",category:"Watches",price:3000,description:"Blue Skeleton Dial, Quartz movement, Date Function, stainless steel",image:"6.png",stock:1,inStock:true},
+  {id:"p3",name:"Vacheron Contantine. Blue Skeleton Dial.",category:"Watches",price:3000,description:"Quartz movement, Date Function, stainless steel",image:"6.png",stock:1,inStock:true},
 ];
 
 // ─── STATE ────────────────────────────────────────────────
@@ -556,7 +556,7 @@ function renderShop() {
         <div class="card-category">${p.category}</div>
         <div class="card-name">${p.name}</div>
         <div class="card-desc">${p.description}</div>
-        <div class="card-price">PKR ${p.price.toLocaleString()} <span>/ piece</span></div>
+        <div class="card-price">PKR ${p.price.toLocaleString()} </div>
         <div class="card-actions">
           <button class="btn-cart" onclick="addToCart('${p.id}')" ${!p.inStock || p.stock === 0 ? 'disabled' : ''}>${!p.inStock || p.stock === 0 ? 'Out of Stock' : 'Add to Cart'}</button>
           <button class="btn-quick" onclick="openQuickView('${p.id}')"><i class="fas fa-eye"></i></button>
