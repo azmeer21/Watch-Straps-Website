@@ -52,7 +52,7 @@ body{background:var(--black);color:var(--white);font-family:monospace;overflow-x
 .hero-title em{color:var(--gold);font-style:italic;}
 .hero-sub{color:var(--grey);font-size:1rem;font-weight:300;letter-spacing:.5px;margin-bottom:2.5rem;line-height:1.7;animation:fadeUp .8s .3s ease both;}
 .hero-btns{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;animation:fadeUp .8s .45s ease both;}
-.btn-primary{background:var(--gold);color:var(--black);padding:.85rem 2.5rem;border:none;font-family:monospace;font-size:.85rem;font-weight:600;letter-spacing:2px;text-transform:uppercase;cursor:pointer;transition:all .3s;text-decoration:none;display:inline-block;}
+.btn-primary{background:var(--gold);color:black;padding:.85rem 2.5rem;border:none;font-family:monospace;font-size:.85rem;font-weight:600;letter-spacing:2px;text-transform:uppercase;cursor:pointer;transition:all .3s;text-decoration:none;display:inline-block;}
 .btn-primary:hover{background:var(--gold-light);transform:translateY(-2px);}
 .btn-outline{background:transparent;color:var(--white);padding:.85rem 2.5rem;border:1px solid var(--border);font-family:monospace;font-size:.85rem;font-weight:500;letter-spacing:2px;text-transform:uppercase;cursor:pointer;transition:all .3s;text-decoration:none;display:inline-block;}
 .btn-outline:hover{border-color:var(--gold);color:var(--gold);}
@@ -493,9 +493,9 @@ const STORAGE_CART = "ag_cart";
 
 // ─── SAMPLE PRODUCTS ──────────────────────────────────────
 const SAMPLE_PRODUCTS = [
-  {id:"p1",name:"Patek Phillip Nautilus. Ref no: 5911. Sports watch.",category:"Watches",price:3000,description:"Quartz movement, Date Function, Stainless steel",image:"1.jpg",stock:1,inStock:true},
+  {id:"p1",name:"Patek Phillip Nautilus",category:"Watches",price:3000,description:"Ref no: 5911. Sports watch, Quartz movement, Date Function, Stainless steel",image:"1.jpg",stock:1,inStock:true},
   {id:"p2",name:"Cartier Santos",category:"Watches",price:3000,description:"Quartz movement, Black & Silver, Crocodile Strap",image:"4.png",stock:1,inStock:true},
-  {id:"p3",name:"Vacheron Contantine. Blue Skeleton Dial.",category:"Watches",price:3000,description:"Quartz movement, Date Function, stainless steel",image:"6.png",stock:1,inStock:true},
+  {id:"p3",name:"Vacheron Contantine",category:"Watches",price:3000,description:"Blue Skeleton Dial, Quartz movement, Date Function, stainless steel",image:"6.png",stock:1,inStock:true},
 ];
 
 // ─── STATE ────────────────────────────────────────────────
